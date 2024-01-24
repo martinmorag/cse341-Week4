@@ -34,9 +34,12 @@ app.use((req, res, next) => {
         'Origin, X-Requrested-With, Content-Type, Accept, Z-Key'
     );
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-    next();
+    next()
 });
-app.use('/', require('./routes'));
+app
+    .use(cors({ methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
+    .use(cors({ origin: '*'}))
+    .use('/', require('./routes/index.js'));
 
 process.on('uncaughtException', (err, origin) => {
     console.log(process.stderr.fd, `Caught exception ${err}\n` + `Exception origin: ${origin}`);
