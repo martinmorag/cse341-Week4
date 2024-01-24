@@ -1,0 +1,12 @@
+GET http://localhost:3030/users/
+
+DELETE http://localhost:3000/users/65a040c03b59948749be8691
+Content-Type: application/json
+
+{
+    "email": "testfor@example.com",
+    "birthday": "Jan 30th",
+    "favoriteColor": "Brown",
+    "firstName": "Ismael",
+    "lastName": "Barrowed"
+}
