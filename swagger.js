@@ -5,7 +5,7 @@ const doc = {
         title: 'People Api',
         description: 'People Api'
     },
-    host: 'localhost:3040',
+    host: 'localhost:3050',
     schemes: ['http', 'https']
 };
 
